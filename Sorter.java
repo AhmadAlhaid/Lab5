@@ -1,19 +1,16 @@
 public class Sorter{
-    public static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            int minElementIndex = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[minElementIndex] > arr[j]) {
-                    minElementIndex = j;
-                }
-            }
-            if (minElementIndex != i) {
-                int temp = arr[i];
-                arr[i] = arr[minElementIndex];
-                arr[minElementIndex] = temp;
-            }
-        }
-    }
+    public static void insertionSort(int arr[], int n){ 
+        int i, key, j; 
+        for (i = 1; i < n; i++){ 
+            key = arr[i]; 
+            j = i - 1; 
+            while (j >= 0 && arr[j] > key){ 
+                arr[j + 1] = arr[j]; 
+                j = j - 1; 
+            } 
+            arr[j + 1] = key; 
+        } 
+    } 
 	public static void main(String[] args){
 		
 
